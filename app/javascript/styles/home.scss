@@ -1,0 +1,53 @@
+.home-index-page {
+  background-color: #f9f9f9;
+
+  .rx-icon {
+    font-family: "smb-icon" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .rx-grid {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .mblog-grid {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-small {
+      .rx-grid-post-column {
+        width: calc(100% * 5 / 6.001);
+
+        .grid-content {
+          .grid-main {
+            width: 75%;
+
+            &-content {
+              background-color: #ffffff;
+              height: 1000px;
+            }
+          }
+
+          .grid-sidebar {
+            width: 25%;
+
+            &-content {
+              position: sticky;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

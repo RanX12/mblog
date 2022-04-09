@@ -1,0 +1,72 @@
+[class*='rx-grid'] {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+.grid-card {
+  position: relative;
+  box-sizing: border-box;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.grid-card-default {
+  padding: 25px 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 2%);
+}
+
+.rx-grid-about-column {
+  width: calc(100% * 1 / 6.001);
+
+  &-sidebar {
+    position: sticky;
+    top: 50px;
+  }
+
+  .grid-card-header {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .header-circle {
+      border-radius: 50%;
+    }
+
+    .header-icons {
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    ul.sidebar-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    
+      > li {
+        :not(:last-child) {
+          border-bottom: 1px solid #f3f3f3;
+        }
+      }
+    
+      .sidebar-menu-item {
+        position: relative;
+        width: 100%;
+        padding: 12px 0px;
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        @include rx-flex-justify-center;
+    
+        &:hover{
+          background: #f0f1f2;
+        }
+      }
+    }
+  }
+}

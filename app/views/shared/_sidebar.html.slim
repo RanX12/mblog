@@ -1,0 +1,22 @@
+.grid-card
+  .grid-card-header.rx-flex-center.rx-flex-column.grid-card-default
+    = link_to root_path, class: 'header-logo rx-mb-8' do
+      = image_pack_tag 'header-logo.jpg', class: 'header-circle'
+    .text-center.rx-blod.rx-font-18.default-color Mr.Ran
+    .header-icons.rx-flex-center.rx-mt-20.rx-mb-20
+      i.rx-icon.icon-qq
+      i.rx-icon.icon-github
+      i.rx-icon.icon-email
+    ul.sidebar-menu
+      = active_link_to root_path, wrap_tag: :li, active: root_path, class: 'sidebar-menu-item' do
+        span 首页
+      = active_link_to root_path, wrap_tag: :li, active: root_path, class: 'sidebar-menu-item' do
+        span 首页
+      = active_link_to root_path, wrap_tag: :li, active: root_path, class: 'sidebar-menu-item' do
+        span 首页
+      = active_link_to root_path, wrap_tag: :li, active: root_path, class: 'sidebar-menu-item' do
+        span 首页
+      = active_link_to root_path, wrap_tag: :li, active: root_path, class: 'sidebar-menu-item' do
+        span 首页
+  .grid-card-footer.text-center.rx-mt-4
+    = link_to '鄂ICP备19011602号', 'http://beian.miit.gov.cn/', target: '_blank', class: 'rx-font-12'

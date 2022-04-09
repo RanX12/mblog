@@ -1,0 +1,16 @@
+@import 'bootstrap_custom';
+// @import 'admin-lte/dist/css/adminlte';
+@import 'adminlte.css';
+
+.main-sidebar {
+  li.nav-item {
+    width: 100%;
+    a {
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.login-box {
+  margin: 7% auto;
+}
