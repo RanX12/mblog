@@ -1,6 +1,29 @@
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/regular";
 
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+
+.daterangepicker {
+  .drp-buttons {
+    .btn-primary {
+      color: #ffffff;
+      background-color: #007bff;
+      border-color: #007bff;
+      box-shadow: none;
+    }
+
+    .btn-default {
+      background-color: #f8f9fa;
+      border-color: #ddd;
+      color: #444;
+    }
+
+    &:hover {
+      .btn:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

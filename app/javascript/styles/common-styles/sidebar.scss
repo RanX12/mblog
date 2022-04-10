@@ -1,4 +1,4 @@
-[class*='rx-grid'] {
+[class*="rx-grid"] {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -47,13 +47,13 @@
       margin: 0;
       padding: 0;
       text-align: center;
-    
+
       > li {
         :not(:last-child) {
           border-bottom: 1px solid #f3f3f3;
         }
       }
-    
+
       .sidebar-menu-item {
         position: relative;
         width: 100%;
@@ -62,8 +62,8 @@
         font-size: 14px;
         text-decoration: none;
         @include rx-flex-justify-center;
-    
-        &:hover{
+
+        &:hover {
           background: #f0f1f2;
         }
       }

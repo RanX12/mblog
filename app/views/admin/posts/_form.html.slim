@@ -1,0 +1,20 @@
+.row data-controller='admin-label'
+  .col-sm-6
+    = bootstrap_form_for [:admin, @post] do |f|
+      = f.text_field :title, label: '标题'
+      = f.text_field :used_at, as: :string, label: '发布日期', value: f.object.new_record? ? Time.current : f.object.used_at, required: true, class: 'datetimepicker'
+      = f.select :label_ids, options_for_select(Label.all.map { |l| [l.name, l.id] }, f.object.labels), { hide_label: true, wrapper: false, include_hidden: false }, multiple: true
+      ul.nav.nav-tabs.rx-mt-20#tabs
+        li.nav-item
+          a.nav-link.active data-toggle="tab" href="#content" 内容
+        li.nav-item
+          a.nav-link#preview-link data-toggle="tab" href="#preview" 预览
+      / = link_to '上传图片', "#", id: 'upload_photo'
+      / input type="file" style="display: none;"
+
+      .tab-content
+        .tab-pane.fade.show.active#content
+          = f.text_area :content, hide_label: true, id: 'content-input'
+
+        .tab-pane.fade.markdown-article#preview
+        = f.submit class: 'rx-btn rx-btn-blue'

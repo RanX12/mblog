@@ -20,6 +20,8 @@ end
 group :development do
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
   gem 'listen', '~> 3.3'
   gem 'spring'
 end
@@ -35,6 +37,7 @@ gem 'sprockets', '~> 3.7.2'
 gem 'pg', '>= 1.1'
 gem 'figaro'
 gem 'simple_form', '~> 4.1'
+gem 'bootstrap_form', '>= 4.2.0'
 gem 'slim-rails'
 gem 'high_voltage', '~> 3.1'
 gem 'browser_warrior', '>= 0.11.0'

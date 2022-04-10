@@ -1,0 +1,2 @@
+class JoinTablePostLabel < ApplicationRecord
+end
