@@ -7,17 +7,25 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.3",
+    "@ttskch/select2-bootstrap4-theme": "^1.5.2",
     "admin-lte": "3.2",
     "bootstrap": "^4.3.1",
+    "codemirror": "^5.65.2",
     "css-loader": "^3.6.0",
     "daterangepicker": "^3.0.5",
+    "dompurify": "^2.0.12",
+    "element-ui": "^2.13.2",
     "expose-loader": "^0.7.5",
+    "highlight.js": "^9.15.10",
     "jquery": "^3.3.1",
+    "katex": "^0.12.0",
+    "marked": "^1.2.0",
     "moment-timezone": "^0.5.34",
     "popper.js": "^1.14.7",
     "rails-erb-loader": "^5.5.2",
     "sass": "1.40.1",
     "sass-loader": "^9.0.1",
+    "select2": "^4.1.0-rc.0",
     "style-loader": "^1.2.1",
     "tempusdominus-core": "^5.19.0",
     "turbolinks": "^5.2.0",
@@ -32,6 +40,14 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^27.0.6",
+    "prettier": "2.0.4",
     "webpack-dev-server": "^3"
+  },
+  "scripts": {
+    "prettier": "prettier app/javascript --write"
   }
 }

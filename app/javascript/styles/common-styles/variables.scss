@@ -1,0 +1,37 @@
+@function hover-color($color1, $color2: #000000, $weight: 80%) {
+  @return mix(
+    $color1,
+    $color2,
+    $weight
+  ); // $weight 表示$color1的权重， 1 - $weight 表示$color2的权重
+}
+
+$major-red: #f23524; // rgb(242, 53, 36)
+$major-red-darken: hover-color($major-red); // rgb(194, 42, 29)
+$minor-blue: #408cff; // rgb(64, 140, 255)
+$minor-blue-darken: hover-color($minor-blue); // rgb(51, 112, 204)
+$font-color: #333333; // rgb(51, 51, 51) 标题类
+$font-color-content: #666666; // rgb(102, 102, 102) 普通文本类
+$font-color-hint: #999999; // rgb(153, 153, 153) 提示类
+$font-color-weaken: #cccccc; // rgb(204, 204, 204) 弱化文字 图标 文本框
+$font-color-disabled: #b8becc; // rgb(184, 190, 204) 禁用
+$font-color-brown: #e08a5a; // rgb(224, 138, 90) VIP 文字
+$background-color: #f0f1f2; // rgb(240, 241, 242) 通用背景色
+$background-color-weaken: #f7f8fa; // rgb(247, 248, 250) 一级背景 控制台主背景
+$background-color-dark: #1a1a1a; // rgb(26, 26, 26) 深色背景 一二级遮罩分别为0.7和0.4
+$border-color: #f0f1f2; // rgb(240, 241, 242)
+// 辅助色
+$helper-red: #f05548; // rgb(240, 85, 72) 重要警告 提示
+$helper-orange: #fa8e58; // rgb(250, 142, 88) 次要警告
+$helper-light-orange: #f6d7c6; // rgb(246, 215, 198)
+$helper-yellow: #ffc34d; // rgb(255, 195, 77)
+$helper-green: #3ac093; // rgb(58, 192, 147)
+$helper-cyan: #52b8cc; // rgb(82, 184, 204)
+$helper-gray: #b8becc; // rgb(184, 190, 204)
+
+// 字体大小
+$title-size: 16px; // 一级标题
+$title-size-md: 14px; // 二级标题
+$title-size-sm: 12px; // 三级标题
+$content-size: 14px; // 一级正文
+$content-size-sm: 12px; // 二级正文

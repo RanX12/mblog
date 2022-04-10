@@ -1,0 +1,180 @@
+require:
+  - 'rubocop-rspec'
+
+inherit_from:
+  - '.rubocop_todo.yml'
+
+# Common configuration.
+AllCops:
+  TargetRubyVersion: '2.5.3'
+  Exclude:
+    - 'bin/**/*'
+    - 'config/deploy/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'node_modules/**/*'
+    - 'spec/fixtures/**/*'
+    - 'Gemfile'
+
+#################### Layout #################################
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Lint/NonLocalExitFromIterator:
+  Enabled: false
+
+#################### Style #################################
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/GlobalVars:
+  AllowedVariables:
+    - '$agora'
+    - '$aliyun_pnp'
+    - '$browser_compatibility'
+    - '$dingtalk'
+    - '$lark'
+    - '$mokaexam'
+    - '$mokainterview'
+    - '$redis'
+    - '$upyun'
+    - '$wework_suite'
+    - '$wework_provider'
+    - '$wxapp'
+
+Style/GuardClause:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+Style/IfInsideElse:
+  Enabled: false
+
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Style/InverseMethods:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '()'
+    '%I': '()'
+    '%w': '()'
+    '%W': '()'
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: 'brackets'
+
+#################### Metrics ###############################
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/BlockNesting:
+  Max: 4
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+#################### Naming #################################
+Naming/HeredocDelimiterNaming:
+  Enabled: false
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Naming/MethodParameterName:
+  Enabled: false
+
+Naming/PredicateName:
+  Enabled: false
+
+
+#################### Rspec #################################
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/requests/**/*'
+    - 'spec/tasks/**/*'
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/RepeatedExample:
+  Exclude:
+    - 'spec/requests/runner_spec.rb'

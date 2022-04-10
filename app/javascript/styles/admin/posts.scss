@@ -1,0 +1,30 @@
+.admin-posts-edit-page,
+.admin-posts-index-page {
+  td {
+    i.fa {
+      margin-right: 0.2rem;
+    }
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .select2 {
+    width: 100% !important;
+  }
+
+  #content-input {
+    min-height: 30rem;
+  }
+
+  #preview {
+    padding: 0.5rem;
+    border: 1px solid #eee;
+    border-top: none;
+  }
+
+  #upload_photo {
+    float: right;
+    margin-top: -2rem;
+  }
+}

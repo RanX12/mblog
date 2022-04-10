@@ -13,12 +13,12 @@ BrowserWarrior.detect do |browser|
   next true if browser.facebook?
 
   # Block known non-modern browser
-  next false if browser.chrome?("<= 65")
-  next false if browser.safari?("< 10")
-  next false if browser.firefox?("< 52")
-  next false if browser.ie?("< 11")
-  next false if browser.edge?("< 15")
-  next false if browser.opera?("< 50")
+  next false if browser.chrome?('<= 65')
+  next false if browser.safari?('< 10')
+  next false if browser.firefox?('< 52')
+  next false if browser.ie?('< 11')
+  next false if browser.edge?('< 15')
+  next false if browser.opera?('< 50')
 
   # Allow by default
   next true

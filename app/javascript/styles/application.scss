@@ -1,6 +1,8 @@
-@import 'bootstrap_custom';
-@import 'common-styles/common_styles';
-@import 'common-styles/icon';
-@import 'common-styles/sidebar';
+@import "bootstrap_custom";
+@import "daterangepicker/daterangepicker";
+@import "common-styles/variables";
+@import "common-styles/common";
+@import "common-styles/icon";
+@import "common-styles/sidebar";
 
-@import 'home';
+@import "home";
