@@ -10,6 +10,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'carrierwave'
+gem 'redcarpet'
+gem 'rouge'
+gem 'mini_magick'
+gem 'html_truncator'
+
 # view
 gem 'active_link_to', '~> 1.0'
 
