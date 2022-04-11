@@ -8,7 +8,6 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def create
-    byebug
     @post = Post.new(post_params)
 
     if @post.save
