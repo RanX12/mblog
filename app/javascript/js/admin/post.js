@@ -16,11 +16,9 @@ $(document).on("turbolinks:load", function () {
 
   var datetimepicker = component.find(".datetimepicker");
   datetimepicker.daterangepicker({
-    maxDate: new Date(),
     autoApply: true,
     singleDatePicker: true,
     timePicker: true,
-    autoUpdateInput: false,
   });
 
   let cm = CodeMirror.fromTextArea(component.find("#content-input")[0], {

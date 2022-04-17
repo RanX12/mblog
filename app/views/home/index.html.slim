@@ -1,11 +1,21 @@
-.mblog-grid
-  .mblog-grid-small.rx-grid
-    .rx-grid-about-column
-      .rx-grid-about-column-sidebar.grid-sticky
-        = render 'shared/sidebar'
-    .rx-grid-post-column
-      .grid-content.mblog-grid-small.rx-grid
-        .grid-main.rx-pl-16
-          .grid-main-content.grid-card-default
-        .grid-sidebar.rx-pl-16
-          .grid-sidebar-content.grid-card-default
+- if params[:type] == 'air_conditioner'
+  = render 'shared/air_conditioner'
+  span
+    | 空调源代码来自
+    = link_to '这里', 'https://github.com/YunYouJun/air-conditioner', target: '_blank'
+    | 。
+- elsif @posts.count.zero?
+  .no-data.text-center 该标签暂无数据
+- else
+  - @posts.each do |post|
+    .post-wrapper
+      .post-title = post.title
+      .post-meta.rx-flex-align-center
+        .post-meta-created-time.rx-mr-20 = format_date(post.used_at || post.created_at)
+        .post-meta-tag-list.rx-flex-align-center
+          - post.labels.each do |label|
+            .post-tag.rx-mr-8 = label.name
+      .post-excerpts.rx-mt-8.rx-mb-8
+        = post.excerpts
+      .btn-wrapper.rx-mt-12
+        = link_to '阅读全文 >>', post_path(post), class: 'post-read-more'

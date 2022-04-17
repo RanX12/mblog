@@ -15,6 +15,7 @@ gem 'redcarpet'
 gem 'rouge'
 gem 'mini_magick'
 gem 'html_truncator'
+gem 'ip_locator_cn'
 
 # view
 gem 'active_link_to', '~> 1.0'
