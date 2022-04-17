@@ -3,6 +3,8 @@
     = bootstrap_form_for [:admin, @post] do |f|
       = f.text_field :title, label: '标题'
       = f.text_field :used_at, as: :string, label: '发布日期', value: f.object.new_record? ? Time.current : f.object.used_at, required: true, class: 'datetimepicker'
+      = f.text_field :excerpts, label: '摘录', placeholder: '一句话描述该篇文章'
+      = f.label :label_ids, '标签'
       = f.select :label_ids, options_for_select(Label.all.map { |l| [l.name, l.id] }, f.object.labels), { hide_label: true, wrapper: false, include_hidden: false }, multiple: true
       ul.nav.nav-tabs.rx-mt-20#tabs
         li.nav-item

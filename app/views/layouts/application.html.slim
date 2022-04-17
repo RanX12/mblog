@@ -24,4 +24,14 @@ html
   body class=body_class
     main
       .container
-        == yield
+        .mblog-grid
+          .mblog-grid-small.rx-grid
+            = render 'shared/sidebar'
+            .rx-grid-post-column
+              .grid-content.mblog-grid-small.rx-grid
+                .grid-main.rx-pl-16
+                  .grid-main-content.grid-card-default.rx-pl-20.rx-pr-20.rx-pb-40
+                    == yield
+                .grid-sidebar.rx-pl-16
+                  .grid-sidebar-content.grid-card-default.rx-pl-20.rx-pr-20
+                    = render 'shared/label_sidebar'

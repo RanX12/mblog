@@ -1,0 +1,4 @@
+- Label.order(created_at: :desc).each do |label|
+  .label-wrapper
+    = link_to root_path(label_id: label), class: 'label-name' do
+      = "#{label.name}(#{label.posts.count})"

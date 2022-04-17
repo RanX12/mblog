@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
   # mount ActionCable.server => '/cable'
   root to: 'home#index'
+
+  resources :posts, only: [:show]
 end
