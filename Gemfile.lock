@@ -1,20 +1,3 @@
-GIT
-  remote: https://github.com/kaminari/kaminari.git
-  revision: 2f0e0728f511e2807cc7ea5b7c81ee71c7c378e8
-  specs:
-    kaminari (1.2.2)
-      activesupport (>= 4.1.0)
-      kaminari-actionview (= 1.2.2)
-      kaminari-activerecord (= 1.2.2)
-      kaminari-core (= 1.2.2)
-    kaminari-actionview (1.2.2)
-      actionview
-      kaminari-core (= 1.2.2)
-    kaminari-activerecord (1.2.2)
-      activerecord
-      kaminari-core (= 1.2.2)
-    kaminari-core (1.2.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -148,6 +131,18 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     launchy (2.5.0)
       addressable (~> 2.7)
     listen (3.7.1)
@@ -360,7 +355,7 @@ DEPENDENCIES
   html_truncator
   ip_locator_cn
   jbuilder (~> 2.7)
-  kaminari!
+  kaminari
   launchy
   listen (~> 3.3)
   mina (~> 1.2.2)
