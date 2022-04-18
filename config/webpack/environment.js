@@ -1,6 +1,5 @@
 const { environment } = require('@rails/webpacker')
 const webpack = require('webpack')
-const { VueLoaderPlugin } = require('vue-loader')
 
 environment.loaders.prepend('erb', {
   test: /\.erb$/,
@@ -11,14 +10,6 @@ environment.loaders.prepend('erb', {
     options: {
       runner: (/^win/.test(process.platform) ? 'ruby ' : '') + 'bin/rails runner'
     }
-  }]
-})
-
-environment.plugins.prepend('VueLoaderPlugin', new VueLoaderPlugin())
-environment.loaders.prepend('vue', {
-  test: /\.vue$/,
-  use: [{
-    loader: 'vue-loader'
   }]
 })
 
