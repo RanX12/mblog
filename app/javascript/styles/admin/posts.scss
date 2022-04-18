@@ -2,10 +2,10 @@
 .admin-posts-index-page {
   td {
     i.fa {
-      margin-right: 0.2rem;
+      margin-right: 3.2px;
     }
     span {
-      margin-right: 0.5rem;
+      margin-right: 8px;
     }
   }
 
@@ -14,17 +14,17 @@
   }
 
   #content-input {
-    min-height: 30rem;
+    min-height: 480px;
   }
 
   #preview {
-    padding: 0.5rem;
+    padding: 8px;
     border: 1px solid #eee;
     border-top: none;
   }
 
   #upload_photo {
     float: right;
-    margin-top: -2rem;
+    margin-top: -32px;
   }
 }
