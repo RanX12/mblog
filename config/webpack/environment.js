@@ -37,7 +37,7 @@ environment.loaders.append('expose', {
 })
 
 environment.config.merge({
-  devtool: 'none'
+  devtool: false
 });
 
 module.exports = environment
