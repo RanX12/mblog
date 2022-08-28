@@ -1,0 +1,33 @@
+# 默认在 root 角色下
+apt upgrade
+
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key add -
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+
+apt update
+apt install caddy
+
+vim /etc/caddy/Caddyfile
+
+将下面的内容写入 Caddyfile
+```
+https://www.yourdomain.com {
+  encode zstd gzip
+  root * /home/ruby/data/www/rails-app/current/public
+  file_server
+  tls yourmail@gmail.com
+  @notStatic {
+     not file
+  }
+  reverse_proxy @notStatic unix//home/ruby/data/www/rails-app/shared/tmp/sockets/puma.sock
+
+  header / {
+    Strict-Transport-Security "max-age=31536000"
+  }
+}
+
+yourdomain.com, http://www.yourdomain.com, http://yourdomain.com {
+  redir https://www.yourdomain.com{uri}
+}
+```

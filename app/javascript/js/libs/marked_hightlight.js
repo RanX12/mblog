@@ -2,7 +2,9 @@ import DOMPurify from 'dompurify'
 import { marked } from 'marked'
 import katex from 'katex'
 import h from 'highlight.js'
-import 'highlight.js/scss/github-gist.scss'
+// import 'highlight.js/scss/googlecode.scss'
+// import 'highlight.js/scss/solarized-light.scss'
+import 'highlight.js/scss/vs.scss'
 
 const escapeHTML = function (text) {
   return text.replace(/[&<>"]/g, (ch) => {
