@@ -13,11 +13,11 @@
         /   = link_to 'mailto: 942840260@qq.com', target: '_blank' do
         /     i.blog-icon.blog-icon-email
         ul.sidebar-menu
-          = active_link_to root_path, wrap_tag: :li, active: :inclusive, class: 'sidebar-menu-item' do
+          = active_link_to root_path, wrap_tag: :li, active: :exact, class: 'sidebar-menu-item' do
             span 首页
           = active_link_to root_path(type: 'air_conditioner'), wrap_tag: :li, active: { type: 'air_conditioner' }, class: 'sidebar-menu-item' do
             span 凉快一下~
-          = active_link_to about_path, wrap_tag: :li, active: :inclusive, class: 'sidebar-menu-item' do
+          = active_link_to about_path, wrap_tag: :li, active: /about/, class: 'sidebar-menu-item' do
             span 关于
       .grid-card-footer.text-center.rx-mt-4
         .copy.rx-font-12 ranxiao.vip Copyright © #{Time.current.year}
