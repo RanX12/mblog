@@ -1,5 +1,6 @@
 .home-index-page,
-.posts-show-page {
+.posts-show-page,
+.abouts-show-page {
   background-color: #f9f9f9;
 
   .rx-icon {
@@ -35,6 +36,7 @@
 
             &-content {
               background-color: #ffffff;
+              max-width: 690px;
 
               .no-data {
                 padding: 200px 0;

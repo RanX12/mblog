@@ -10,7 +10,7 @@ class AdminConstraint
 end
 
 Rails.application.routes.draw do
-  namespace :admin do
+  namespace :admin, path: (ENV['ADMIN_BACKEND_PATH'].presence || '/admin') do
     get 'login', to: 'sessions#new', as: :login
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy', as: :logout
@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :posts, only: [:show]
+  resource :about, only: [:show]
 end

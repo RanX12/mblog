@@ -10,3 +10,5 @@ SIDEKIQ_DB: '1'
 
 # google anlytics
 GA: ''
+
+ADMIN_BACKEND_PATH: ''

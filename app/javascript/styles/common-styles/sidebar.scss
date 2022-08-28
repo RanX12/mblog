@@ -53,6 +53,10 @@
         :not(:last-child) {
           border-bottom: 1px solid #f3f3f3;
         }
+
+        &.active {
+          background: #f8f9fa;
+        }
       }
 
       .sidebar-menu-item {
