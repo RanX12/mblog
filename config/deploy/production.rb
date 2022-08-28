@@ -1,5 +1,5 @@
 set :domain, '124.221.244.29'
-set :deploy_to, '/home/ruby/mblog'
+set :deploy_to, '/home/ruby/data/www/mblog'
 set :repository,  'git@github.com:RanX12/mblog.git'
 set :branch, 'master'
 set :user, 'ruby'
