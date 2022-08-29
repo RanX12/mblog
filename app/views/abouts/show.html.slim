@@ -1,8 +1,13 @@
 .container.text-center
   p
-  h1 About Page
+  h1 关于我
   hr
-  p No About，Is rubyist
+  div
+    | 19 年毕业来深圳写 Bug，已经在
+    = link_to ' ShowMeBug ', 'https://www.showmebug.com', target: '_blank'
+    | 写了 #{ Time.current.year - 2019 } 年的 Bug 了
+  div 实名上网，10 个人里有 8 个人会叫错，声明：我姓冉，不姓肖！
+  div 
   br
   br
   br

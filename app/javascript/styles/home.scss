@@ -44,6 +44,10 @@
               }
 
               .post-wrapper {
+                &:not(:last-child) {
+                  border-bottom: 1px solid #e5e5e5;
+                }
+
                 &:not(:first-child) {
                   margin-top: 40px;
                 }
@@ -86,6 +90,7 @@
                   border-radius: 4px;
                   color: #ffffff;
                   font-size: 14px;
+                  display: inline-block;
 
                   &:hover {
                     background-color: $minor-blue-darken;

@@ -11,9 +11,9 @@ html
     meta name="turbolinks-cache-control" content="no-cache"
     title
       - if content_for?(:title)
-        = yield(:title) + " | mblog"
+        = yield(:title) + " | 我姓冉，不姓肖!"
       - else
-        | mblog
+        | 我姓冉，不姓肖!
     = csrf_meta_tags
     = action_cable_meta_tag
     = content_for?(:head) ? yield(:head) : ''
