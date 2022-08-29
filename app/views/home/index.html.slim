@@ -8,7 +8,7 @@
   .no-data.text-center 该标签暂无数据
 - else
   - @posts.each do |post|
-    .post-wrapper
+    .post-wrapper.rx-pb-20
       .post-title = post.title
       .post-meta.rx-flex-align-center
         .post-meta-created-time.rx-mr-20 = format_date(post.used_at || post.created_at)
