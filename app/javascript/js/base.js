@@ -18,7 +18,3 @@ $(document).on("turbolinks:load", function () {
   $('[data-toggle="tooltip"]').tooltip();
   window.App.clock.install();
 });
-
-$(document).on("turbolinks:unload", function () {
-  window.App.clock.uninstall();
-})
