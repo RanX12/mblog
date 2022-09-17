@@ -1,25 +1,19 @@
-.rx-grid-about-column
-  .rx-grid-about-column-sidebar.grid-sticky
-    .grid-card
-      .grid-card-header.rx-flex-center.rx-flex-column.grid-card-default
-        = link_to root_path, class: 'header-logo rx-mb-8' do
-          = image_pack_tag 'header-logo.jpg', class: 'header-circle'
-        .text-center.rx-blod.rx-font-18.default-color Mr.Ran
-        / .header-icons.rx-flex-center.rx-mt-20.rx-mb-20
-        /   = link_to 'tencent://message/?uin=1726449139', target: '_blank' do
-        /     i.blog-icon.blog-icon-qq.rx-mr-4
-        /   = link_to 'https://github.com/RanX12', target: '_blank' do
-        /     i.blog-icon.blog-icon-github.rx-mr-4
-        /   = link_to 'mailto: 942840260@qq.com', target: '_blank' do
-        /     i.blog-icon.blog-icon-email
-        ul.sidebar-menu
-          = active_link_to root_path, wrap_tag: :li, active: :exact, class: 'sidebar-menu-item' do
-            span 首页
-          = active_link_to root_path(type: 'air_conditioner'), wrap_tag: :li, active: { type: 'air_conditioner' }, class: 'sidebar-menu-item' do
-            span 凉快一下~
-          = active_link_to about_path, wrap_tag: :li, active: /about/, class: 'sidebar-menu-item' do
-            span 关于
-      .grid-card-footer.text-center.rx-mt-4
-        .copy.rx-font-12 ranxiao.vip Copyright © #{Time.current.year}
-        div
-          = link_to '粤ICP备2022099822号', 'http://beian.miit.gov.cn/', target: '_blank', class: 'rx-font-12'
+.sidebar
+  .blog-flex-center.blog-flex-column
+    = link_to root_path, class: 'header-logo blog-mb-8' do
+      = image_pack_tag 'header-logo.jpg', class: 'header-circle'
+    .text-center.blog-blod.blog-font-18.default-color Mr.Ran
+    / .header-icons.blog-flex-center.blog-mt-20.blog-mb-20
+    /   = link_to 'tencent://message/?uin=1726449139', target: '_blank' do
+    /     i.blog-icon.blog-icon-qq.blog-mr-4
+    /   = link_to 'https://github.com/RanX12', target: '_blank' do
+    /     i.blog-icon.blog-icon-github.blog-mr-4
+    /   = link_to 'mailto: 942840260@qq.com', target: '_blank' do
+    /     i.blog-icon.blog-icon-email
+    ul.sidebar-menu
+      = active_link_to root_path, wrap_tag: :li, active: :exact, class: 'sidebar-menu-item' do
+        span 首页
+      = active_link_to root_path(type: 'air_conditioner'), wrap_tag: :li, active: { type: 'air_conditioner' }, class: 'sidebar-menu-item' do
+        span 凉快一下~
+      = active_link_to about_path, wrap_tag: :li, active: /about/, class: 'sidebar-menu-item' do
+        span 关于

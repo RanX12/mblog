@@ -1,45 +1,45 @@
-@mixin rx-flex {
+@mixin blog-flex {
   display: flex;
 }
-.rx-flex {
-  @include rx-flex;
+.blog-flex {
+  @include blog-flex;
 }
 
-@mixin rx-flex-column {
+@mixin blog-flex-column {
   display: flex;
   flex-direction: column;
 }
 
-.rx-flex-column {
-  @include rx-flex-column;
+.blog-flex-column {
+  @include blog-flex-column;
 }
 
-@mixin rx-flex-center {
+@mixin blog-flex-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.rx-flex-center {
-  @include rx-flex-center;
+.blog-flex-center {
+  @include blog-flex-center;
 }
 
-@mixin rx-flex-align-center {
+@mixin blog-flex-align-center {
   display: flex;
   align-items: center;
 }
-.rx-flex-align-center {
-  @include rx-flex-align-center;
+.blog-flex-align-center {
+  @include blog-flex-align-center;
 }
 
-@mixin rx-flex-justify-center {
+@mixin blog-flex-justify-center {
   display: flex;
   justify-content: center;
 }
-.rx-flex-justify-center {
-  @include rx-flex-justify-center;
+.blog-flex-justify-center {
+  @include blog-flex-justify-center;
 }
 
-$rx-fontsize: (
+$blog-fontsize: (
   12: 12px,
   14: 14px,
   16: 16px,
@@ -47,13 +47,19 @@ $rx-fontsize: (
   20: 20px,
 );
 
-@each $key, $fontsize in $rx-fontsize {
-  .rx-font-#{$key} {
+.sticky-layout {
+  position: sticky;
+  top: 20px;
+  transition: top 0.3s;
+}
+
+@each $key, $fontsize in $blog-fontsize {
+  .blog-font-#{$key} {
     font-size: $fontsize !important;
   }
 }
 
-$rx-spaces: (
+$blog-spaces: (
   4: 4px,
   8: 8px,
   12: 12px,
@@ -66,35 +72,35 @@ $rx-spaces: (
 // 一般左右间距为4 8 12 20 40
 // 一般上下间距为8 12 20 32 40
 // 一般内边距为8 12 16 20
-@each $key, $space in $rx-spaces {
-  .rx-mt-#{$key} {
+@each $key, $space in $blog-spaces {
+  .blog-mt-#{$key} {
     margin-top: $space !important;
   }
-  .rx-mr-#{$key} {
+  .blog-mr-#{$key} {
     margin-right: $space !important;
   }
-  .rx-mb-#{$key} {
+  .blog-mb-#{$key} {
     margin-bottom: $space !important;
   }
-  .rx-ml-#{$key} {
+  .blog-ml-#{$key} {
     margin-left: $space !important;
   }
 
-  .rx-pt-#{$key} {
+  .blog-pt-#{$key} {
     padding-top: $space !important;
   }
-  .rx-pr-#{$key} {
+  .blog-pr-#{$key} {
     padding-right: $space !important;
   }
-  .rx-pb-#{$key} {
+  .blog-pb-#{$key} {
     padding-bottom: $space !important;
   }
-  .rx-pl-#{$key} {
+  .blog-pl-#{$key} {
     padding-left: $space !important;
   }
 }
 
-.rx-blod {
+.blog-blod {
   font-weight: 600;
 }
 
@@ -102,8 +108,7 @@ $rx-spaces: (
   color: #333333;
 }
 
-// smb button component
-.rx-btn {
+.blog-btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -137,12 +142,12 @@ $rx-spaces: (
   &-group {
     display: flex;
 
-    .rx-btn:not(:last-child) {
+    .blog-btn:not(:last-child) {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
 
-    .rx-btn:not(:first-child) {
+    .blog-btn:not(:first-child) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -201,29 +206,29 @@ $rx-spaces: (
   &-icon {
     padding: 7px;
 
-    .rx-icon {
+    .blog-icon {
       font-size: 20px;
       margin-right: 4px;
     }
 
-    &.rx-btn-md {
+    &.blog-btn-md {
       padding: 3px;
 
-      .rx-icon {
+      .blog-icon {
         font-size: 16px;
       }
     }
 
-    &.rx-btn-sm {
+    &.blog-btn-sm {
       padding: 1px 3px;
 
-      .rx-icon {
+      .blog-icon {
         font-size: 12px;
       }
     }
   }
 
-  &-icon .rx-icon {
+  &-icon .blog-icon {
     margin-right: unset;
   }
 

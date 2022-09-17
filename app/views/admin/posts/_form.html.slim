@@ -6,7 +6,7 @@
       = f.text_field :excerpts, label: '摘录', placeholder: '一句话描述该篇文章'
       = f.label :label_ids, '标签'
       = f.select :label_ids, options_for_select(Label.all.map { |l| [l.name, l.id] }, f.object.labels), { hide_label: true, wrapper: false, include_hidden: false }, multiple: true
-      ul.nav.nav-tabs.rx-mt-20#tabs
+      ul.nav.nav-tabs.blog-mt-20#tabs
         li.nav-item
           a.nav-link.active data-toggle="tab" href="#content" 内容
         li.nav-item
@@ -19,4 +19,4 @@
           = f.text_area :content, hide_label: true, id: 'content-input'
 
         .tab-pane.fade.markdown-article#preview
-        = f.submit class: 'rx-btn rx-btn-blue'
+        = f.submit class: 'blog-btn blog-btn-blue'

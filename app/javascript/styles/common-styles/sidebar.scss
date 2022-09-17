@@ -1,4 +1,4 @@
-[class*="rx-grid"] {
+[class*="blog-grid"] {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -17,60 +17,51 @@
   box-shadow: 0 2px 15px rgb(0 0 0 / 2%);
 }
 
-.rx-grid-about-column {
-  width: calc(100% * 1 / 6.001);
-
-  &-sidebar {
-    position: sticky;
-    top: 50px;
+.sidebar {
+  img {
+    width: 100px;
+    height: 100px;
   }
 
-  .grid-card-header {
+  .header-circle {
+    border-radius: 50%;
+  }
+
+  .header-icons {
     img {
-      width: 100px;
-      height: 100px;
+      width: 18px;
+      height: 18px;
     }
+  }
 
-    .header-circle {
-      border-radius: 50%;
-    }
+  ul.sidebar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
 
-    .header-icons {
-      img {
-        width: 18px;
-        height: 18px;
+    > li {
+      :not(:last-child) {
+        border-bottom: 1px solid #f3f3f3;
+      }
+
+      &.active {
+        background: #f8f9fa;
       }
     }
 
-    ul.sidebar-menu {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    .sidebar-menu-item {
+      position: relative;
       width: 100%;
+      padding: 12px 0px;
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      @include blog-flex-justify-center;
 
-      > li {
-        :not(:last-child) {
-          border-bottom: 1px solid #f3f3f3;
-        }
-
-        &.active {
-          background: #f8f9fa;
-        }
-      }
-
-      .sidebar-menu-item {
-        position: relative;
-        width: 100%;
-        padding: 12px 0px;
-        color: #333;
-        font-size: 14px;
-        text-decoration: none;
-        @include rx-flex-justify-center;
-
-        &:hover {
-          background: #f0f1f2;
-        }
+      &:hover {
+        background: #f0f1f2;
       }
     }
   }
