@@ -9,11 +9,12 @@ html
     meta name="HandheldFriendly" content="True"
     meta name="MobileOptimized" content="320"
     meta name="turbolinks-cache-control" content="no-cache"
+    script src="http://pv.sohu.com/cityjson?ie=utf-8"
     title
       - if content_for?(:title)
-        = yield(:title) + " | 我姓冉，不姓肖!"
+        = yield(:title) + " | 😘"
       - else
-        | 我姓冉，不姓肖!
+        | 😘
     = csrf_meta_tags
     = action_cable_meta_tag
     = content_for?(:head) ? yield(:head) : ''
@@ -25,13 +26,23 @@ html
     main
       .container
         .mblog-grid
-          .mblog-grid-small.rx-grid
-            = render 'shared/sidebar'
-            .rx-grid-post-column
-              .grid-content.mblog-grid-small.rx-grid
-                .grid-main.rx-pl-16
-                  .grid-main-content.grid-card-default.rx-pl-20.rx-pr-20.rx-pb-40
+          .mblog-grid-small.blog-grid
+            .blog-grid-post-column
+              .grid-content.mblog-grid-small.blog-grid
+                .grid-main.blog-pl-16
+                  .grid-main-content.grid-card-default.blog-pl-20.blog-pr-20.blog-pb-40
                     == yield
-                .grid-sidebar.rx-pl-16
-                  .grid-sidebar-content.grid-card-default.rx-pl-20.rx-pr-20
-                    = render 'shared/label_sidebar'
+                .grid-sidebar.blog-pl-16
+                  .sticky-layout
+                    .grid-sidebar-content.grid-card-default
+                      .card-widget
+                        = render 'shared/sidebar'
+                    .grid-sidebar-content.grid-card-default.blog-mt-20
+                      .card-widget.card-clock
+                        .card-background
+                          #electric-clock
+                            img class="entered loading" id="card-clock-loading" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"
+                    .grid-card-footer.text-center.blog-mt-4
+                      .copy.blog-font-12 ranxiao.vip Copyright © #{Time.current.year}
+                      div
+                        = link_to '粤ICP备2022099822号', 'http://beian.miit.gov.cn/', target: '_blank', class: 'blog-font-12'

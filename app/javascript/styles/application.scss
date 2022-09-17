@@ -2,7 +2,18 @@
 @import "daterangepicker/daterangepicker";
 @import "common-styles/variables";
 @import "common-styles/common";
+@import "common-styles/clock";
 @import "common-styles/markdown-article-custom";
 @import "common-styles/sidebar";
 
 @import "home";
+
+@media (min-width: 1200px) {
+  .container-xl,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1200px;
+  }
+}

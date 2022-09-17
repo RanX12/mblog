@@ -2,13 +2,29 @@
   p
   h1 关于我
   hr
-  div
-    | 19 年毕业来深圳写 Bug，已经在
-    = link_to ' ShowMeBug ', 'https://www.showmebug.com', target: '_blank'
-    | 写了 #{ Time.current.year - 2019 } 年的 Bug 了
-  div 实名上网，10 个人里有 8 个人会叫错，声明：我姓冉，不姓肖！
+  .text-left
+    div
+      | 本域名从我19年还在学校时就申请了，中间一直在折腾，用过 HEXO、WordPress，现在这个是用的 Ruby On Rails，之前的数据没有做过迁移，部分记录在了
+      = link_to '博客园', 'https://www.cnblogs.com/Mr-RanX', target: '_blank'
+      br
+      br
+      | ---------------------工作经历----------------------
+      br
+      div 2019.06 - 2019.08
+      div 毕业后足足在武汉干了两个月的 Java，由于公司制度太难受了（早上要做早操，要穿工衣并要扣好所有扣子（会扣钱的20..50不等），不准玩手机 500..1000，男生每周要加班4天，必须到晚上9点半，不多说了，都是泪）
+      br
+      div 2019.10 - 现在
+      | 9月初揣了两千块钱来到了深圳，在
+      = link_to ' ShowMeBug ', 'https://www.showmebug.com', target: '_blank'
+      | 一直干（不知道，我也不知道是什么能让我一直在一家创业公司待下去的，现在已经元老级别...），进去的时候还只有老板一个人在做那个项目，我作为应届毕业生，啥都不懂的菜鸟，跟着老板一起做，现在已经有30多万用户了（截至2022-09-17）
+      div 在公司担任全栈工程师，21 年下半年开始负责部分新同事的 code review 工作、每周迭代的部署工作（3 个人轮流），产品主要是用于线上招聘（笔试、面试、音视频）
+      br
+      div ---------------------技术栈----------------------
+      ul
+        li Ruby On Rails
+        li Linux
+        li Git
+        li VueJS
+        li Agile Development
+        li PostgreSQL / Mysql 
   div 
-  br
-  br
-  br
-  = link_to 'Back to Home', root_path

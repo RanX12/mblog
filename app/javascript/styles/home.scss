@@ -3,15 +3,15 @@
 .abouts-show-page {
   background-color: #f9f9f9;
 
-  .rx-icon {
-    font-family: "rx-icon" !important;
+  .blog-icon {
+    font-family: "blog-icon" !important;
     font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .rx-grid {
+  .blog-grid {
     display: flex;
     margin: 0;
     padding: 0;
@@ -27,16 +27,13 @@
     margin-right: auto;
 
     &-small {
-      .rx-grid-post-column {
-        width: calc(100% * 5 / 6.001);
-
+      .blog-grid-post-column {
         .grid-content {
           .grid-main {
-            width: 75%;
+            width: 70%;
 
             &-content {
               background-color: #ffffff;
-              max-width: 690px;
 
               .no-data {
                 padding: 200px 0;
@@ -102,12 +99,12 @@
           }
 
           .grid-sidebar {
-            width: 25%;
+            width: 30%;
+            // position: sticky;
+            // top: 20px;
 
             &-content {
-              position: sticky;
-              top: 0;
-              padding: 20px;
+              padding: 16px;
 
               .label-wrapper {
                 margin-bottom: 4px;

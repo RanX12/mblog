@@ -8,14 +8,14 @@
   .no-data.text-center 该标签暂无数据
 - else
   - @posts.each do |post|
-    .post-wrapper.rx-pb-20
+    .post-wrapper.blog-pb-20
       .post-title = post.title
-      .post-meta.rx-flex-align-center
-        .post-meta-created-time.rx-mr-20 = format_date(post.used_at || post.created_at)
-        .post-meta-tag-list.rx-flex-align-center
+      .post-meta.blog-flex-align-center
+        .post-meta-created-time.blog-mr-20 = format_date(post.used_at || post.created_at)
+        .post-meta-tag-list.blog-flex-align-center
           - post.labels.each do |label|
-            .post-tag.rx-mr-8 = label.name
-      .post-excerpts.rx-mt-8.rx-mb-8
+            .post-tag.blog-mr-8 = label.name
+      .post-excerpts.blog-mt-8.blog-mb-8
         = post.excerpts
-      .btn-wrapper.rx-mt-12
+      .btn-wrapper.blog-mt-12
         = link_to '阅读全文 >>', post_path(post), class: 'post-read-more'
