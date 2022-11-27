@@ -16,5 +16,7 @@ ActiveStorage.start();
 
 $(document).on("turbolinks:load", function () {
   $('[data-toggle="tooltip"]').tooltip();
+  if ($('#electric-clock').length <= 0) return
+
   window.App.clock.install();
 });
