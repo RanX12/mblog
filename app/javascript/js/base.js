@@ -16,5 +16,5 @@ ActiveStorage.start();
 
 $(document).on("turbolinks:load", function () {
   $('[data-toggle="tooltip"]').tooltip();
-  window.App.clock.install();
+  // window.App.clock.install();
 });
