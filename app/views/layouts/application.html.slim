@@ -9,7 +9,7 @@ html
     meta name="HandheldFriendly" content="True"
     meta name="MobileOptimized" content="320"
     meta name="turbolinks-cache-control" content="no-cache"
-    script src="https://pv.sohu.com/cityjson?ie=utf-8"
+    / script src="https://pv.sohu.com/cityjson?ie=utf-8"
     title
       - if content_for?(:title)
         = yield(:title) + " | 😘"
@@ -37,11 +37,11 @@ html
                     .grid-sidebar-content.grid-card-default
                       .card-widget
                         = render 'shared/sidebar'
-                    .grid-sidebar-content.grid-card-default.blog-mt-20
-                      .card-widget.card-clock
-                        .card-background
-                          #electric-clock
-                            img class="entered loading" id="card-clock-loading" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"
+                    / .grid-sidebar-content.grid-card-default.blog-mt-20
+                    /   .card-widget.card-clock
+                    /     .card-background
+                    /       #electric-clock
+                    /         img class="entered loading" id="card-clock-loading" src="https://npm.elemecdn.com/hexo-butterfly-clock/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"
                     .grid-card-footer.text-center.blog-mt-4
                       .copy.blog-font-12 ranxiao.vip Copyright © #{Time.current.year}
                       div
