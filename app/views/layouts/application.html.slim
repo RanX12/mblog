@@ -14,7 +14,7 @@ html
       - if content_for?(:title)
         = yield(:title) + " | 程序员下饭经验"
       - else
-        | 😘
+        | 程序员下饭经验
     = csrf_meta_tags
     = action_cable_meta_tag
     = content_for?(:head) ? yield(:head) : ''
